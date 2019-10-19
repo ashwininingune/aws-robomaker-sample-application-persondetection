@@ -8,21 +8,35 @@
   <license>MIT</license>
   <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
   <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
-  <buildtool_depend>catkin</buildtool_depend>
-  <depend>roscpp</depend>
+  <!-- <buildtool_depend>ament_cmake</buildtool_depend> -->
+  <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
-  <depend>tf</depend>
+  <!-- <depend>tf</depend> -->
   <depend>gazebo_ros</depend>
   <depend>gazebo_plugins</depend>
-  <depend>turtlebot3_description</depend>
-  <depend>turtlebot3_navigation</depend>
-  <depend>dwa_local_planner</depend>
+  <!-- depend>turtlebot3_description</depend>
+  <depend>turtlebot3_navigation2</depend --> 
+  <depend>turtlebot3_msgs</depend>
+  <depend>turtlebot3</depend>
+  <depend>xacro</depend>
+  <depend>launch</depend> 
+  <depend>cloudwatch_logger</depend>
+  <depend>kinesis_manager</depend>
+  <depend>kinesis_video_streamer</depend>
+  <depend>kinesis_video_msgs</depend>
+  <depend>h264_encoder_core</depend>
+  <depend>h264_video_encoder</depend>
+  <depend>health_metric_collector</depend>
+  <!-- <depend>dwa_local_planner</depend> -->
   <exec_depend>gazebo</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <exec_depend>turtlebot3_description_reduced_mesh</exec_depend>
 
   <export>
+    <build_type>ament_cmake</build_type>
     <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models"/>
   </export>
 </package>
